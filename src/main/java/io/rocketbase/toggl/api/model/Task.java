@@ -18,6 +18,9 @@ public class Task {
     @JsonProperty("wid")
     private Long workspaceId;
 
+    @JsonProperty("pid")
+    private Long projectId;
+
     @JsonProperty("uid")
     private Long assignedUserId;
 
