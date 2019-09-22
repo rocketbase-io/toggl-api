@@ -1,6 +1,7 @@
 package io.rocketbase.toggl.api;
 
 import io.rocketbase.toggl.api.resource.ClientResource;
+import io.rocketbase.toggl.api.resource.UserResource;
 import io.rocketbase.toggl.api.resource.WorkspacesResource;
 
 public class TogglApi {
@@ -17,6 +18,10 @@ public class TogglApi {
 
     public ClientResource client() {
         return new ClientResource(context);
+    }
+
+    public UserResource user() {
+        return new UserResource(context);
     }
 
 }
