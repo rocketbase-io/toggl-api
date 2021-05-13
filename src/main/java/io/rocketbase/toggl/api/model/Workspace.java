@@ -1,10 +1,11 @@
 package io.rocketbase.toggl.api.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.Instant;
 
 
 @Data
@@ -33,7 +34,8 @@ public class Workspace {
     @JsonProperty("rounding_minutes")
     private Integer roundingMinutes;
 
-    private Date at;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ssXXX")
+    private Instant at;
 
     @JsonProperty("logo_url")
     private String logoUrl;

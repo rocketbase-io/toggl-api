@@ -1,10 +1,11 @@
 package io.rocketbase.toggl.api.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.Instant;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -55,7 +56,8 @@ public class User {
     @JsonProperty("sidebar_piechart")
     private boolean sidebarPiechart;
 
-    private Date at;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ssXXX")
+    private Instant at;
 
     /**
      * Toggl can send newsletters over e-mail to the user

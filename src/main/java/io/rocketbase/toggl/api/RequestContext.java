@@ -31,7 +31,7 @@ public class RequestContext {
 
 
     protected ObjectMapper getObjectMapper() {
-        ObjectMapper mapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper().findAndRegisterModules();
         return mapper;
     }
 
