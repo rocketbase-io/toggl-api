@@ -21,6 +21,10 @@ public class TogglApiBuilder {
         this.userAgent = userAgent;
         return this;
     }
+    public TogglApiBuilder host(String host) {
+        this.host = host;
+        return this;
+    }
 
     public TogglApi build() {
         RequestContext context = new RequestContext(this);
