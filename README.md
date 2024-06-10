@@ -1,4 +1,9 @@
-# Java Client of Toggl API
+# [ARCHIVED] Java Client of Toggl API
+
+> [!WARNING]  
+> Toggl hat disabled this api-version. You need to port to v9.
+> 
+> A new client has been generated -> [toggl-api-v9](https://github.com/rocketbase-io/toggl-api-v9)
 
 This project is a Java client for the public [Toggl API](https://github.com/toggl/toggl_api_docs). 
 The client is based on a fluent java api that maps the cascade of methods to the Toggl's api endpoints. For example:
